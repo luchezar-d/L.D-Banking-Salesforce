@@ -1,4 +1,4 @@
-# Salesforce Enterprise Platform
+# L.D Banking Salesforce Platform
 
 Enterprise-grade Salesforce platform with AWS integration capabilities, featuring custom Apex classes, Lightning Web Components, and Connected Apps for seamless cloud integration.
 
@@ -10,7 +10,29 @@ This project includes:
 - **AWS Integration Hub** - Connected App for AWS services
 - **Enterprise-grade architecture** and best practices
 
-## Featuresrce DX Project: Next Steps
+## Project Structure
+- `force-app/` - Contains all Salesforce metadata including Apex classes, Lightning components, and configurations
+- `manifest/` - Contains package.xml for deployment manifests
+- `config/` - Project configuration files
+- `scripts/` - Utility scripts for development
+
+## Branches
+- `main` - Production-ready code
+- `dev` - Development branch for new features
+
+## Development Workflow
+1. Create feature branches from `dev`
+2. Make changes and test locally
+3. Submit pull request to merge into `dev`
+4. After testing, merge `dev` into `main` for production deployment
+
+## Deployment
+Use the VS Code task "Deploy to Org" or run:
+```bash
+sf project deploy start --target-org MyDevOrg
+```
+
+## Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
