@@ -4,14 +4,28 @@
     <description>Connected App for AWS services integration including Lambda, S3, and API Gateway</description>
     <label>AWS Integration Hub</label>
     <oauthConfig>
-        <callbackUrl>https://your-aws-api-gateway.amazonaws.com/oauth/callback</callbackUrl>
+        <callbackUrl>https://k3vah56dgk.execute-api.eu-west-1.amazonaws.com/prod/handleLoanEvents</callbackUrl>
+        <consumerKey>3MVG9LBJLApeX_PA0aL2DIIGSvvA.R1ZcjS665d4tud4fuhRjb83DquLh5l6lHXntRIZ7r4OypEDf.FToeYkN</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
         <scopes>Api</scopes>
-        <scopes>RefreshToken</scopes>
         <scopes>Web</scopes>
         <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
     </oauthConfig>
     <oauthPolicy>
         <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
         <refreshTokenPolicy>infinite</refreshTokenPolicy>
     </oauthPolicy>
 </ConnectedApp>
