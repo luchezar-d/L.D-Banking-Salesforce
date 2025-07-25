@@ -1,0 +1,13 @@
+<aura:component controller="CustomAccountController">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="account" type="Account"/>
+    
+    <div class='myDiv'>
+        <p>Account name : {!v.account.Name}</p>
+    </div>
+    <div class='myDiv'>
+        <p>Account id : {!v.account.Id}</p>
+    </div>
+    <div class='myDiv'>
+        <p>Description : {!v.account.Description}</p></div>
+</aura:component>

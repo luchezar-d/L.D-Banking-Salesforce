@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Related Contactszzz">
+        <template if:true={contacts.data}>
+            <ul>
+                <template for:each={contacts.data} for:item="contact">
+                    <li key={contact.Id}>
+                        <div class="slds-p-around_medium lgc-bg">
+                            <lightning-tile label={contact.name} href="/path/to/somewhere">
+                                <lightning-icon icon-name="standard:contact" size="small"></lightning-icon>
+                                <p class="slds-truncate" title={contact.Firstname}>First name : {contact.FirstName}</p>
+                                <p class="slds-truncate" title={contact.Lastname}>Last name : {contact.Lastname}</p>
+                                <p class="slds-truncate" title={contact.Email}>First name : {contact.Email}</p>
+                            </lightning-tile>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </template>
+        
+    </lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<aura:component >
+	<aura:attribute name="message" type="String"></aura:attribute>
+    <aura:attribute name="myList" type="String[]"></aura:attribute>
+    <aura:attribute name="pippo" type="Boolean"></aura:attribute>
+    <aura:attribute name="account" type="Account"></aura:attribute>
+    
+    <p>Hello World: {!v.message}</p>
+    <aura:iteration items="{!v.myList}" var="gavri">
+    	<p>My Item : {!gavri}</p>
+    </aura:iteration>
+    
+    <aura:if isTrue="{!v.pippo}">
+    	<p>IT WORKS!!!</p>
+        <aura:set attribute="else">
+            <p>It DOESNT WORKKK</p>
+        </aura:set>
+    </aura:if>
+</aura:component>

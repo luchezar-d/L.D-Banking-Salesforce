@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Accounts with Contacts" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <template for:each={accounts} for:item="account">
+                <h1 key={account.id}>Account name is : {account.Name}</h1>
+                <template for:each={account.Contacts} for:item="contact">
+                    <p key={contact.id}>First Name for account - {account.Name} is :{contact.FirstName}</p>
+                    <p key={contact.id}>Last Name for account - {account.Name} is : {contact.LastName}</p>
+                </template>
+            </template>
+            <template if:true={noAccounts}>
+                <h1>No Accounts found.</h1>
+            </template>
+        </div>
+    </lightning-card>
+</template>

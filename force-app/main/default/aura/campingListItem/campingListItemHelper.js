@@ -1,0 +1,5 @@
+({
+	deleteItem : function(component) {
+		
+	}
+})

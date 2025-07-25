@@ -1,0 +1,18 @@
+.THIS .myStyle{
+    border:2px solid blue;
+    border-radius:10px;
+    padding:10px;
+    color:white;
+    background-color:black;
+    transition:all ease 0.5s;
+    margin-left:40%;
+    cursor:pointer;
+}
+.THIS .myStyle:hover{
+    border:2px solid black;
+    border-radius:10px;
+    padding:10px;
+    color:white;
+    background-color:black;
+    transform:scale(1.1);
+}

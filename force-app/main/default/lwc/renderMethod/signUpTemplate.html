@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Sign up page">
+        <div class="slds-var-m-around_medium">
+            <h2 class="slds-text-heading_medium slds-var-m-bottom_medium">Sign up form</h2>
+            <lightning-input type="text" label="First Name"></lightning-input>
+            <lightning-input type="text" label="Last Name"></lightning-input>
+            <lightning-input type="email" label="Email"></lightning-input>
+            <lightning-input type="password" label="Password"></lightning-input>
+            <lightning-button variant="destructive" label="Back" title="Back" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="success" label="Sign up" title="Sign up" onclick={submitHandler} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

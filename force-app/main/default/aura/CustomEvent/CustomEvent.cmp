@@ -1,0 +1,14 @@
+<aura:component controller="CustomEventCustomController">
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:attribute name="event" type="Custom_Event__c[]" />
+    
+    <aura:iteration items="{!v.event}" var="event">
+        <div class="myDiv">
+    	<p>My Events : {!event.Name}</p>
+    	<p>My Event End Date : {!event.End_Date__c}</p>
+    	<p>My Event Start Date : {!event.Start_Date__c}</p>
+    	<p>My Event Price : {!event.Price__c}</p>
+    	<p>My Event Discount : {!event.Discount__c}%</p>
+        </div>
+    </aura:iteration>
+</aura:component>

@@ -1,0 +1,41 @@
+<aura:component >
+    
+    <aura:registerEvent name="deleteItem" type="c:deleteItemEvent"/>
+    <aura:registerEvent name="selectItem" type="c:selectItemEvent"/>
+    <aura:registerEvent name="editItem" type="c:editItemEvent"/>
+    
+	<aura:attribute name="item" type="Camping_Item__c" required="false"></aura:attribute>
+    <aura:attribute name="index" type="Integer" />
+    <lightning:layout multipleRows="true" verticalAlign="center">
+        <lightning:layoutItem flexibility="auto" padding="around-big" size="10">
+    <p>Name:
+        <lightning:formattedText value="{!v.item.Name}"/>
+    </p>
+    <p>Price:
+        <lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/>
+    </p>
+    <p>Quantity:
+    	<lightning:formattedNumber value="{!v.item.Quantity__c}" style="decimal"/>
+    </p>
+    <p>Packed:
+        <lightning:input type="toggle" label="Reimbursed" name="reimbursed" checked="{!v.item.Packed__c}" />
+    </p>
+        </lightning:layoutItem>
+    
+        
+        <lightning:layoutItem flexibility="auto" padding="around-big" size="2">
+    		<lightning:button label="Delete" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.deleteItem}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="auto" padding="around-big" size="2">
+    		<lightning:button label="Select" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.selectItem}"/>
+        </lightning:layoutItem>
+    
+    <!--<lightning:button label="Packed" onclick="{!c.packItem}"/>-->
+    </lightning:layout>
+</aura:component>

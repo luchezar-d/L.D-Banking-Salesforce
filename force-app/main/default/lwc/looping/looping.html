@@ -1,0 +1,48 @@
+<template>
+    <lightning-card  title="looping-demo">
+        <div class="slds-m-horizontal_large">
+            <template for:each={carList} for:item="car">
+                <ul class="slds-has-dividers_around-space slds-m-vertical_x-small" key={car}>
+                    <li class="slds-item">{car}</li>
+                    </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="looping-demo with array of objects">
+        <div class="slds-m-horizontal_large">
+            <template for:each={ceoList} for:item="list">
+                <ul class="slds-has-dividers_around-space slds-m-vertical_x-small" key={list.id}>
+                    <li class="slds-item">{list.name}</li>
+                    </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="iterator-demo">
+        <div class="slds-m-horizontal_large">
+            <template iterator:ceo={ceoList} >
+                <div key={ceo.value.id}>
+                    <ul class="slds-has-dividers_around-space slds-m-vertical_x-small">
+                        <template if:true={ceo.first}>
+                            <div class="slds-box slds-theme_shade">
+                                <strong>List of companies and their CEOS</strong>
+                            </div>
+                        </template>
+                        
+                        <li class="slds-item">
+                            <strong>{ceo.value.company} </strong>
+                            {ceo.value.name}
+                        </li>
+
+                        <template if:true={ceo.last}>
+                            <div class="slds-box slds-theme_shade">
+                                <strong>This is the last iteration</strong>
+                            </div>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

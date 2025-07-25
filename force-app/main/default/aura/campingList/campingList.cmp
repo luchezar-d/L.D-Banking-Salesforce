@@ -1,0 +1,50 @@
+<aura:component controller="CampingListController">
+    
+    <aura:attribute name="items" type="Camping_Item__c[]" required="false"></aura:attribute>
+    
+    <aura:attribute name="selectedItem" type="Camping_Item__c" default="{'Name': '',
+                        											'Price__c': 0,
+                       												'Quantity__c': 0,
+                        											'Reimbursed__c': false,
+                                                                   	'sobjectType':'Camping_Item__c'}">
+    </aura:attribute>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:handler name="addItem" action="{!c.handleAddItem}" event="c:addItemEvent"/>
+    <aura:handler name="deleteItem" action="{!c.handleDeleteItem}" event="c:deleteItemEvent"/>
+    
+    <aura:handler name="selectItem" action="{!c.handleSelectItem}" event="c:selectItemEvent"/>
+    <aura:handler name="editItem" action="{!c.handleEditItem}" event="c:editItemEvent"/>
+    <aura:handler name="searchItem" action="{!c.handleSearchItem}" event="c:SearchEvent"/>
+    
+        <!--Form goes here-->
+    <div>
+        <lightning:layout multipleRows="true">
+                <lightning:layoutItem flexibility="auto" padding="horizontal-medium" size="4" />
+                    <lightning:layoutItem flexibility="auto" padding="horizontal-medium" size="4">
+                        <lightning:card title="Campings">
+        					<c:campingListForm newItem="{!v.selectedItem}"/>
+                        </lightning:card>
+            		</lightning:layoutItem>
+                 <lightning:layoutItem flexibility="auto" padding="horizontal-medium" size="4" />
+        </lightning:layout>
+    
+    <lightning:layout multipleRows="true" horizontalAlign="center" class="slds-page-header slds-page-header--object-home">
+    
+        <lightning:layoutItem flexibility="auto" padding="around-big" size="2" />
+        <lightning:layoutItem flexibility="auto" padding="around-big" size="8">
+            
+    <lightning:card title="Campings">
+        <p class="slds-p-horizontal--small">
+            <div class="myScroll">
+            <aura:iteration items="{!v.items}" var="items" indexVar="index">
+            			<c:campingListItem item="{!items}" index="{!index}"/>
+            </aura:iteration>
+                 </div>
+        </p>
+    </lightning:card>
+               
+            </lightning:layoutItem>
+        <lightning:layoutItem flexibility="auto" padding="around-big" size="2" />
+        </lightning:layout>
+        </div>
+</aura:component>

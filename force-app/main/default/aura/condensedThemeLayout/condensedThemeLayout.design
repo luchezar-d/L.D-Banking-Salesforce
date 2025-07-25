@@ -1,0 +1,4 @@
+<design:component label="Condensed Theme Layout">
+    <!--Shows a field in the Theams section-->
+    <design:attribute name="showSearch" label="Show Search Box" />
+</design:component>

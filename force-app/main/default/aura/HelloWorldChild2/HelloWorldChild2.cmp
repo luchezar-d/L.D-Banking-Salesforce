@@ -1,0 +1,29 @@
+<aura:component >
+	<aura:attribute name="myListOfStrings" type="String[]"></aura:attribute>
+    <aura:attribute name="myListOfStrings2" type="String[]"></aura:attribute>
+    <aura:attribute name="TrueOrFalse" type="Boolean"></aura:attribute>
+    <aura:attribute name="message" type="String"></aura:attribute>
+
+    
+    
+    <aura:if isTrue="{!v.TrueOrFalse}">
+        <aura:iteration items="{!v.myListOfStrings}" var="gavri">
+			<p>Items: {!gavri}</p>                                                      
+    	</aura:iteration>
+    	<aura:set attribute="else">
+        <aura:iteration items="{!v.myListOfStrings2}" var="gavri">
+			<p>Items: {!gavri}</p>                                                      
+    	</aura:iteration>
+        </aura:set>
+    </aura:if>
+    
+    <div>
+    	<lightning:button label="Today is going to be a bad day" class="myStyle"
+                      onclick="{!c.handleClick}"/>
+        <lightning:button label="Today is going to be a great day" class="myStyle"
+                      onclick="{!c.handleClick}"/>
+    </div>
+    
+    <p>Hello World: {!v.message}</p>
+                                                    
+</aura:component>

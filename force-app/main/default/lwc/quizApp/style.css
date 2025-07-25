@@ -1,0 +1,12 @@
+.green-div {
+    background-color: green;
+    color: white; /* Optional: Makes the text color white for better visibility */
+    padding: 10px; /* Optional: Add padding for better styling */
+    margin-bottom: 10px; /* Optional: Add margin for spacing between dynamically added divs */
+}
+.red-div {
+    background-color: red;
+    color: white; /* Optional: Makes the text color white for better visibility */
+    padding: 10px; /* Optional: Add padding for better styling */
+    margin-bottom: 10px; /* Optional: Add margin for spacing between dynamically added divs */
+}
